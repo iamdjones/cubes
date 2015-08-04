@@ -1,7 +1,7 @@
 var alpha = [0,0,0,0];
 var colors = ["","","","","",""];
-var angles = [0,0,0,0,0,0];
-
+var edges = [0,0,0,0,0,0];
+var angles = [0,0,0,0,0,0]
 
 $(function(){
     $('.control-wrapper').hover(
@@ -36,9 +36,9 @@ $(function(){
 		$('#cubes').css("background",buildBackground());
 	});
 	
-	$('.square .control').on('input',function(){
+	$('.edges .control').on('input',function(){
 		var value = $(this).val();
-		angles[$(this).parent().index()] = value;
+		edges[$(this).parent().index()] = value;
 		$('#cubes').css("background",buildBackground());
 	
 		var leftValue = (value*1.3 + 15) - Math.floor((value*1) / $(this).width() * 2)*50;
@@ -53,26 +53,26 @@ $(function(){
 function buildBackground(){
 	return 'repeating-linear-gradient(45deg,' +
 		   'black 0%,' +
-		   'black ' + angles[0] + '%,' +
-		   'transparent ' + angles[0] + '%,' +
-		   'transparent ' + angles[1] + '%,' +
-		   'black ' + angles[1] + '%,' +
+		   'black ' + edges[0] + '%,' +
+		   'transparent ' + edges[0] + '%,' +
+		   'transparent ' + edges[1] + '%,' +
+		   'black ' + edges[1] + '%,' +
 		   'black 100%' +
 		   '),' +
 		   'repeating-linear-gradient(-45deg,' +
 		   'black 0%,' +
-		   'black ' + angles[2] + '%,' +
-		   'transparent ' + angles[2] + '%,' +
-		   'transparent ' + angles[3] + '%,' +
-		   'black ' + angles[3] + '%,' +
+		   'black ' + edges[2] + '%,' +
+		   'transparent ' + edges[2] + '%,' +
+		   'transparent ' + edges[3] + '%,' +
+		   'black ' + edges[3] + '%,' +
 		   'black 100%' +
 		   '),' +
 		   'repeating-linear-gradient(90deg,' +
 		   'black 0%,' +
-		   'black ' + angles[4] + '%,' +
-		   'transparent ' + angles[4] + '%,' +
-		   'transparent ' + angles[5] + '%,' +
-		   'black ' + angles[5] + '%,' +
+		   'black ' + edges[4] + '%,' +
+		   'transparent ' + edges[4] + '%,' +
+		   'transparent ' + edges[5] + '%,' +
+		   'black ' + edges[5] + '%,' +
 		   'black 100%' +
 		   '),' +
 			'repeating-linear-gradient(45deg,' +
