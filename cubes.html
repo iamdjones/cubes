@@ -7,85 +7,70 @@
 		<script src="js/cubes.js"></script>
 	</head>
 	<body>
+
+
+
+		<div id="menu">	
+			<label for="colors">Colors</label>
+			<input type="radio" name="control" id="colors" value="colors">
+			<div class="colors control-wrapper">
+				<div>#<input type="text" value="600" class="control"></div>
+				<div>#<input type="text" value="600" class="control"></div>
+				<div>#<input type="text" value="900" class="control"></div>
+				<div>#<input type="text" value="900" class="control"></div>
+				<div>#<input type="text" value="900" class="control"></div>
+				<div>#<input type="text" value="600" class="control"></div>
+			</div>
+		
+			<label for="alphas">Alphas</label>
+			<input type="radio" name="control" id="alphas" value="alphas">
+			<div class="alphas control-wrapper">
+				<div><span></span><input type="range" value="0" step=".1" class="control"></div>
+				<div><span></span><input type="range" value="38" step=".1" class="control"></div>
+				<div><span></span><input type="range" value="0" step=".1" class="control"></div>
+				<div><span></span><input type="range" value="100" step=".1" class="control"></div>
+				<div><span></span><input type="range" value="0" step=".1" class="control"></div>
+				<div><span></span><input type="range" value="0" step=".1" class="control"></div>
+			</div>
+
+			<label for="blackStops">Black Stops</label>
+			<input type="radio" name="control" id="blackStops" value="blackStops">
+			<div class="blackStops control-wrapper">
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+			</div>
+
+			<label for="transparentStops">Transparent Stops</label>
+			<input type="radio" name="control" id="transparentStops" value="transparentStops">
+			<div class="transparentStops control-wrapper">
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+			</div>
+
+			<label for="colorStops">Color Stops</label>
+			<input type="radio" name="control" id="colorStops" value="colorStops">
+			<div class="colorStops control-wrapper">
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+				<div><span></span><input type="range" value="100" max="500" class="control"></div>
+			</div>
+
+			<label for="angles">Angles</label>
+			<input type="radio" name="control" id="angles" value="angles">
+			<div class="angles control-wrapper">
+				<div><span></span><input type="range" value="45" min="-180" max="180" class="control"></div>
+				<div><span></span><input type="range" value="-45" min="-180" max="180" class="control"></div>
+				<div><span></span><input type="range" value="90" min="-180" max="180" class="control"></div>
+				<div><span></span><input type="range" value="45" min="-180" max="180" class="control"></div>
+				<div><span></span><input type="range" value="-45" min="-180" max="180" class="control"></div>
+				<div><span></span><input type="range" value="90" min="-180" max="180" class="control"></div>
+			</div>
+		</div>
+
 		<div id="cubes">
 		</div>
-
-
-		<div class="control-menu"></div>		
-		<div class="opacity control-wrapper">
-			<div>
-				<input type="range" value="0" class="control" />
-				<span></span>
-			</div>
-			<div>
-				<input type="range" value="38" class="control" />
-				<span></span>
-			</div>
-			<div>
-				<input type="range" value="0" class="control" />
-				<span></span>
-			</div>
-			<div>
-				<input type="range" value="100" class="control" />
-				<span></span>
-			</div>
-		</div>
-		
-		<div class="color control-wrapper">
-			<div>
-			<input type="text" class="control" value='#600' />
-			</div>
-			<div>
-			<input type="text" class="control" value='#600' />
-			</div>
-			<div>
-			<input type="text" class="control" value='#900' />
-			</div>
-			<div>
-			<input type="text" class="control" value='#900' />
-			</div>
-			<div>
-			<input type="text" class="control" value='#900' />
-			</div>
-			<div>
-			<input type="text" class="control" value='#600' />
-			</div>
-		</div>
-		<div id="control-wrapper">
-			<div><input type="range" id="control" step=".1"><span></span></div>
-			<div><input type="range" id="control" step=".1"><span></span></div>
-			<div><input type="range" id="control" step=".1"><span></span></div>
-			<div><input type="range" id="control" step=".1"><span></span></div>
-			<div><input type="range" id="control" step=".1"><span></span></div>
-			<div><input type="range" id="control" step=".1"><span></span></div>
-		</div>
-		<div class="edges control-wrapper">
-			<div>
-				<input type="range" value="43" class="control" />
-				<span></span>
-			</div>
-			<div>
-				<input type="range" value="60" class="control" />
-				<span></span>
-			</div>
-			<div>
-				<input type="range" value="43" class="control" />
-				<span></span>
-			</div>
-			<div>
-				<input type="range" value="60" class="control" />
-				<span></span>
-			</div>
-			<div>
-				<input type="range" value="44" class="control" />
-				<span></span>
-			</div>
-			<div>
-				<input type="range" value="56" class="control"/>
-				<span></span>
-			</div>
-		</div>
-		
 	</body>
 
 </html>
